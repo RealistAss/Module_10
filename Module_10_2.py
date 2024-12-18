@@ -14,10 +14,12 @@ class Knight(threading.Thread):
         for i in range(enemyes):
             time.sleep(1)
             enemyes -= self.power
+            print(f'{self.name} сражается {day} дней, осталось {enemyes} воинов.')
             day += 1
             if enemyes < 0:
                 break
-            print(f'{self.name} сражается {day}, осталось {enemyes} воинов.')
+
+            print(f"{self.name} одержал победу спустя {day} дней(дня)!")
 
 thread1 = Knight('valet', 10)
 thread1.start()
